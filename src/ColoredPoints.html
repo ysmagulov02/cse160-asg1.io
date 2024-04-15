@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Change a Point Color</title>
+</head>
+<body onload="main()">
+  <header>
+    <h1>Yernar Smagulov (ysmagulo@ucsc.edu)</h1>
+    <h4>Grader notes: I did everything besides drawing the picture using webgl. For the html file, I completely changed the layout to my liking by organzing the color buttons, shape selection, and canvas clearing. I think it looks neat and more organized this way.</h4>
+    <h2>My drawing</h2>
+    <img src="my_drawing.jpg" alt="My drawing" style="width:150px; height:auto;">
+  </header>
+  
+  <section style="text-align: center; margin-top: 20px;">
+    <canvas id="webgl" width="400" height="400" style="background-color: #ddd;">
+      Please use a browser that supports "canvas"
+    </canvas>
+    <p id="numdot">XXX</p>
+  </section>
+
+  <section style="text-align: center; margin-top: 20px;">
+    <header><h2>Shape Controls</h2></header>
+    <button type="button" id="pointButton">Point</button>
+    <button type="button" id="triButton">Triangle</button>
+    <button type="button" id="circleButton">Circle</button>
+  </section>
+
+  <section style="text-align: center; margin-top: 20px;">
+    <header><h2>Color Controls</h2></header>
+    <button type="button" id="green">Green</button>
+    <button type="button" id="red">Red</button>
+  </section>
+
+  <section style="text-align: center; margin-top: 20px;">
+    <header><h2>Adjust Color and Size</h2></header>
+    <label>Red <input type="range" min="0" max="100" value="100" class="slider" id="redSlide"></label>
+    <label>Green <input type="range" min="0" max="100" value="0" class="slider" id="greenSlide"></label>
+    <label>Blue <input type="range" min="0" max="100" value="0" class="slider" id="blueSlide"></label>
+    <label>Size <input type="range" min="5" max="40" value="20" class="slider" id="sizeSlide"></label>
+    <label>(Circles) Segment Count <input type="range" min="5" max="20" value="5" class="slider" id="segSlide"></label>
+  </section>
+
+  <section style="text-align: center; margin-top: 20px;">
+    <header><h2>Clear Canvas</h2></header>
+    <button type="button" id="clearButton">Clear</button>
+  </section>
+
+
+  <script src="../lib/webgl-utils.js"></script>
+  <script src="../lib/webgl-debug.js"></script>
+  <script src="../lib/cuon-utils.js"></script>
+  <script src="Triangle.js"></script>
+  <script src="Circle.js"></script>
+  <script src="Point.js"></script>
+  <script src="ColoredPoints.js"></script>
+
+  <footer style="text-align: center; margin-top: 40px;">
+    <small>&copy; 2024 Yernar Smagulov</small>
+  </footer>
+</body>
+</html>
+
+
